@@ -1,0 +1,164 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\title{Tasks on Number Systems and Codes}
+\author{Pershehuba Ihor(w72576)}
+\date{07.11.2024}
+
+\begin{document}
+
+\maketitle
+
+\section*{Task 1}
+I will define the range of numbers represented in the signed magnitude (SM) code for a 16-bit format. Based on the result, I will write the formula to calculate the range of numbers \( L \) in signed magnitude (SM) code in an \( n \)-bit format.
+
+\textbf{Solution:}  
+The range of numbers in signed magnitude code for a 16-bit format is:
+
+\[
+-2^{15} \leq L \leq 2^{15} - 1
+\]
+
+The general formula for the range of numbers in signed magnitude code in an \( n \)-bit format is:
+
+\[
+-2^{n-1} \leq L \leq 2^{n-1} - 1
+\]
+
+\section*{Task 2}
+I will combine the first 8 digits of my PESEL number. I will assign a value of 0 to all even digits and a value of 1 to all odd digits and zeros. Then, I will calculate the decimal value of the resulting number, which has been encoded in an 8-bit signed magnitude code.
+
+PESEL: 07221011130
+
+- First 8 digits: `07221011`
+- Apply encoding: Even digits = 0, Odd digits and 0 = 1:
+\[
+07221011 \rightarrow 10110101
+\]
+Now, I will convert the binary number `10110101` to decimal:
+\[
+10110101_2 = 181_{10}
+\]
+
+Thus, the decimal value is \( 181 \).
+
+\section*{Task 3}
+I will combine the 4th, 5th, and 6th digits of my PESEL number into a number and represent it in unsigned binary (U1) code. I will then convert the number into its opposite (negative) and write it again in U1 code.
+
+PESEL (4th, 5th, and 6th digits):210
+
+1. I will convert \( 210_{10} \) to binary :
+   \[
+   210_{10} = 11010010_2
+   \]
+
+2. I will convert the number to its negative (opposite):
+   \[
+   -210_{10} = 00101101_2 \quad
+   \]
+
+\section*{Task 4}
+I will combine the first 8 digits of my PESEL number. In the resulting number, I will assign a value of 1 to all even digits and a value of 0 to all odd digits and zeros. Then, I will calculate the decimal value of the resulting number encoded in an 8-bit unsigned binary.
+
+PESEL: 07221011130
+
+- First 8 digits: `07221011`
+- Apply encoding: Even digits = 1, Odd digits and 0 = 0:
+\[
+07221011 \rightarrow 11000000
+\]
+Now, I will convert the binary number `11000000` to decimal:
+\[
+11000000_2 = 192_{10}
+\]
+
+Thus, the decimal value is \( 192 \).
+
+\section*{Task 5}
+I will repeat the steps from Task 4 to obtain the number encoded in an 8-bit unsigned binary code and calculate the decimal value.
+
+PESEL: 07221011130
+
+- First 8 digits: `07221011`
+- Apply encoding: Odd digits and zeros = 1, Even digits = 0:
+\[
+07221011 \rightarrow 11000000
+\]
+Now, I will convert the binary number `11000000` to decimal:
+\[
+11000000_2 = 192_{10}
+\]
+
+Thus, the decimal value is \( 192 \).
+
+\section*{Task 6}
+I will combine the last 3 digits of my PESEL number and represent them in unsigned binary code. I will convert the number to its opposite (negative) and write it again. I will also check the correctness of the result using the simplified method for converting decimal numbers.
+
+PESEL (last 3 digits): 130
+
+1. I will convert \( 130_{10} \):
+   \[
+   130_{10} = 10000010_2
+   \]
+
+2. I will convert the number to its opposite (negative):
+   \[
+   -130_{10} = 01111101_2 \quad 
+   \]
+
+\section*{Task 7}
+I will convert the following numbers between number systems:
+
+\begin{enumerate}
+  \item \( 10111,01111_2 \) to decimal
+  \item \( 1110,1100_2 \) to decimal
+  \item \( 22,125_{10} \) to binary
+  \item \( 75,875_{10} \) to binary
+\end{enumerate}
+
+\textbf{Solutions:}
+
+a) \( 10111,01111_2 \rightarrow 7.46875_{10} \)
+
+b) \( 1110,1100_2 \rightarrow 6.75_{10} \)
+
+c) \( 22,125_{10} \rightarrow 10110.001_{2} \)
+
+d) \( 75,875_{10} \rightarrow 1001011.111_{2} \)
+
+\section*{Additional Task (Optional)}
+
+\textbf{Task 1:}  
+Assume that the 7th, 8th, and 9th digits of my PESEL number represent the integer part of a number, while the 10th and 11th digits represent the fractional part. Using fixed-point representation, I will convert the number into binary format with four decimal places of accuracy.
+
+PESEL:07221011130
+
+Integer part: `111`  
+Fractional part: `30`
+
+Number to convert: \( 111.30 \)
+
+In binary:
+\[
+111.30_{10} \rightarrow 1101111.01001100110011001101_2
+\]
+
+\textbf{Task 2:}  
+I will repeat the steps from Task 1 to obtain the decimal number. Using floating-point representation , I will convert it to binary with four decimal places of accuracy. I will check the correctness of the result.
+
+PESEL:07221011130
+
+Number to convert: \( 111.30 \)
+
+In floating-point representation:
+\[
+111.30_{10} = 1.1130 \times 2^7 \quad 
+\]
+
+Thus, the binary representation is:
+\[
+1101111.01001100110011001101_2
+\]
+
+\end{document}
