@@ -1,0 +1,189 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath} % For better math formatting
+
+\title{Lab4}
+\author{Ihor Pershehuba}
+\date{05.12.2024}
+
+\begin{document}
+
+\maketitle
+
+\section*{Task 1}
+
+Album number: 72576. The first two and last two digits are 72 and 76.
+
+\subsection*{a. Addition and Multiplication}
+
+First, let's convert the numbers to binary format.
+
+The decimal number 72:
+\[
+72 = 1001000_2
+\]
+The decimal number 76:
+\[
+76 = 1001100_2
+\]
+
+Now, we perform the arithmetic operations.
+
+\textbf{Addition:} Add the binary numbers 1001000 and 1001100.
+
+\[
+1001000_2 + 1001100_2 = 10010100_2
+\]
+
+The result of the addition is \( 10011000_2 \), which is 148 in decimal.
+
+\textbf{Multiplication:} Multiply the binary numbers 1001000 and 1001100.
+
+\[
+1001000_2 \times 1001100_2 = 1010101100000_2
+\]
+
+The result of the multiplication is \( \textbf{110010100000}_2 \), which is 5472 in decimal.
+
+\subsection*{b. Subtracting the Larger Number from the Smaller Number}
+
+Next, we subtract one number from the other in binary.
+
+\textbf{Subtraction of 76 - 72:}
+
+\[
+1001100_2 - 1001000_2 = 0000100_2
+\]
+
+The result of the subtraction \( 76 - 72 = 4 \), which is \( 0000100_2 \) in binary.
+
+\textbf{Subtraction of 72 - 76:} Since 72 is less than 76, the result will be negative. We use two's complement to represent negative numbers in binary.
+
+\[
+1001000_2 - 1001100_2 = 1111100_2
+\]
+
+This corresponds to \( -4 \) in decimal, since \( 1111100_2 \) is the two's complement representation of \( -4 \).
+
+\subsection*{c. Division of the Last Two Digits}
+
+Now, let's divide the last two digits: \(76_{10}\) and \(10_2\).
+76 = 1001100
+
+\[
+\frac{1001100_2}{10_2} = 100110_2
+\]
+
+Since the album number ends with an even digit (6), we divide by \(10_{2}\). The result is approximately \(38_{10}\).
+
+\section*{Task 2}
+
+Now, let's represent the time 7:07:13 in binary format. We convert each number to binary.
+
+The decimal number 7:
+\[
+7 = 111_2
+\]
+The decimal number 13:
+\[
+13 = 1101_2
+\]
+
+Now we build the binary clock. The time 7:25:12 corresponds to:
+
+\[
+\text{Hours: } 7 \quad (111_2), \quad \text{Minutes: } 7 \quad (111_2), \quad \text{Seconds: } 13 \quad (1101_2)
+\]
+
+We represent this on the binary clock, where 1 represents a black square and 0 represents a white square.
+
+\[
+\begin{array}{|c|c|c|c|c|c|}
+\hline
+0 & 1 & 0 & 1 & 0 & 0 \\
+\hline
+0 & 1 & 0 & 1 & 0 & 1 \\
+\hline
+0 & 1 & 0 & 1 & 1 & 1 \\
+\hline
+\end{array}
+\]
+
+\section*{Task 3}
+
+The last two digits of the album number are 7 and 6. We change the sign of the last digit.
+
+\[
+\text{Last digit: } -7, \quad \text{Second-to-last digit: } 6
+\]
+
+Now we encode these numbers in the two's complement (U2) system using 4 bits.
+
+The decimal number 7:
+\[
+7 = 0111_2
+\]
+
+The two's complement of -7:
+\[
+-7 = 1000_2
+\]
+
+The decimal number 6:
+\[
+6 = 0110_2
+\]
+
+Now we perform arithmetic operations with these encoded numbers in U2.
+
+\textbf{Addition:}
+
+\[
+1000_2 + 0110_2 = 1101_2
+\]
+
+The result of the addition \( 7 + 6 = 13 \), which is \( 1101_2 \) in binary.
+
+\textbf{Subtraction:}
+
+\[
+0110_2 - 0111_2 = 1111_2
+\]
+
+The result of the subtraction \( 6 - 7 = -1 \), which is represented as \( 1111_2 \) in two's complement.
+
+\textbf{Multiplication:}
+
+\[
+0111_2 \times 0110_2 = 010110_2
+\]
+
+The result of the multiplication \( 7 \times 6 = 42 \), which is \( 010110_2 \) in binary.
+
+\section*{Task 4}
+
+Now we perform the division of numbers in two's complement (U2):
+
+\[
+\frac{12}{-4} = -3
+\]
+
+The decimal number 12:
+\[
+12 = 1100_2
+\]
+
+The two's complement of -4:
+\[
+-4 = 1011_2
+\]
+
+Now we perform the division of the two numbers in binary:
+
+\[
+\frac{1100_2}{1011_2} = 11111111_2
+\]
+
+The result of the division is \( -3 \), since \( 11111111_2 \) in two's complement represents \( -3 \).
+
+\end{document}
